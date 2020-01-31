@@ -1,0 +1,17 @@
+<!doctype html>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+solutions...<br>
+<% for(var question_index in set){ 
+    var question=set[question_index]%>
+<div><%=question[0]%><br><%=question[1][question[2]]%></div>
+<% } %>
+<%
+var correct_count=0
+var count=set.length
+for(var answer_index in query.answers){
+var answer=query.answers[answer_index]
+var correct=set[answer_index][2]==answer
+if(correct) correct_count++
+}
+%>
+<div><%=correct_count%>/<%=count%> correct</div>

@@ -32,4 +32,17 @@ app.get('/floor/:floornum/bedroom', function(req, res) {
 })
 // http://localhost:3000/floor/2/bedroom
 
+var quiz_set_1=[
+  ["does a star emit light?",["yes","no"],0],
+  ["is a human always right?",["yes","no"],1]
+  ]
+
+app.get('/quiz/questions', function(req,res){
+  res.render('quiz_questions.ejs',{set:quiz_set_1})
+})
+
+app.get('/quiz/answers', function(req,res){
+  res.render('quiz_answers.ejs',{set:quiz_set_1,query:req.query})
+})
+
 app.listen(3000)
