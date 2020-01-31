@@ -9,6 +9,7 @@ app.set('view engine', 'ejs')
 var path = require('path')
 app.use(express.static(path.join(__dirname, 'public')))
 // http://localhost:3000/test.txt
+app.use(express.urlencoded({ extended: true }))
 
 app.get('/', function (req, res) {
   res.send('Hello World!')
@@ -41,8 +42,8 @@ app.get('/quiz/questions', function(req,res){
   res.render('quiz_questions.ejs',{set:quiz_set_1})
 })
 
-app.get('/quiz/answers', function(req,res){
-  res.render('quiz_answers.ejs',{set:quiz_set_1,query:req.query})
+app.post('/quiz/answers', function(req,res){
+  res.render('quiz_answers.ejs',{set:quiz_set_1,query:req.body})
 })
 
 app.listen(3000)
