@@ -1,7 +1,7 @@
 {
   "name": "web",
   "version": "1.0.0",
-  "description": "",
+  "description": "An ExpressJS web-server application.",
   "main": "main.js",
   "dependencies": {
     "ejs": "^3.0.1",
@@ -12,6 +12,17 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
-  "license": "ISC"
+  "author": "Dario Cangialosi",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/arkenidar/expressjs.git"
+  },
+  "keywords": [
+    "expressjs"
+  ],
+  "bugs": {
+    "url": "https://github.com/arkenidar/expressjs/issues"
+  },
+  "homepage": "https://github.com/arkenidar/expressjs#readme"
 }
