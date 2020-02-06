@@ -16,10 +16,7 @@ app.post('/combined/:parameter/',function(req,res){
     params_parameter: req.params.parameter,
   })
 })
-var quiz_set_1=[
-  ["does a star emit light?",["yes","no"],0],
-  ["is a human always right?",["yes","no"],1]
-  ]
+var quiz_set_1=require('./quiz_set_obvious')
 app.get('/quiz/questions', function(req,res){
   res.render('quiz_questions.ejs',{set:quiz_set_1})
 })
